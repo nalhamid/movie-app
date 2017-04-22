@@ -2,50 +2,53 @@
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
 
 <head>
-    <title>Free CSS template by ChocoTemplates.com</title>
+    <title>Infom</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     <!--[if IE 6]>
-		<link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" />
-	<![endif]-->
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery-func.js"></script>
+        <link rel="stylesheet" href="css/ie6.css" type="text/css" media="all" />
+    <![endif]-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-func.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script src="js/bootstrap.min.js"></script>
     <!-- <script src="https://api.themoviedb.org/3/movie/76341?api_key=bab007b9a6288af1455b8cee1f4f9d36" ></script> -->
     <script src="js/helper.js"></script>
     <script src="js/functions.js"></script>
+    <script type="text/javascript">
+    getSingle();
+    </script>
 </head>
 
 <body>
     <!-- Shell -->
-    <div id="shell">
-        <!-- Header -->
-        <div id="header">
-            <h1 id="logo"><a href="#">Movie App</a></h1>
-            <!-- Navigation -->
-            <div id="navigation">
-                <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                </ul>
+    <div id="shell" class="container">
+        <header>
+            <div class="top-header row text-left">
+                <h1 class="col-md-6">Movie App</h1>
             </div>
-            <!-- end Navigation -->
             <!-- Sub-menu -->
-            <div id="sub-navigation">
-                <ul>
-                    <li><a href="index.html">All</a></li>
-                    <li><a href="popular.html">Popular</a></li>
-                    <li><a href="top.html">TOP RATED</a></li>
-                    <li><a href="new.html">New</a></li>
-                </ul>
-                <div id="search">
-                    <form action="home_submit" method="get" accept-charset="utf-8">
+            <div id="sub-navigation" class="row">
+                <div class="sub-nav">
+                    <ul>
+                        <li><a href="index.html">All</a></li>
+                        <li><a href="popular.html">Popular</a></li>
+                        <li><a href="top.html">Top Rated</a></li>
+                        <!-- <li><a href="latest.html">Latest</a></li> -->
+                        <li><a href="upcoming.html">Upcoming</a></li>
+                    </ul>
+                </div>
+                <div id="search" class="col-md-6 pull-right">
+                    <!--      <form action="home_submit" method="get" accept-charset="utf-8">
                         <label for="search-field">SEARCH</label>
                         <input type="text" name="search field" value="Enter search here" id="search-field" title="Enter search here" class="blink search-field" />
                         <input type="submit" value="GO!" class="search-button" />
-                    </form>
+                    </form> -->
                 </div>
             </div>
             <!-- end Sub-Menu -->
-        </div>
+        </header>
         <!-- end Header -->
         <!-- Main -->
         <div id="main">
@@ -54,20 +57,12 @@
                 <!-- Box -->
                 <div class="box">
                     <div id="single-box">
-                        <div class="single-movie">
-                            <div class="movie-image">
-                                <img src="%poster%" alt="movie" />
-                                <span class="movie-name">%name%</span>
-                                <div class="rating">
-                                    <p>RATING: </p>
-                                    <div> %rating% </div>
-                                </div>
-                                <p>%overview%</p>
-                                <a href="%imdb_id%">IMDB</a>
+                        <div id="single-movie">
+                            <div id="trailers">
+                                <h2 class="row">Trailers</h2>
                             </div>
-                            <div class="trailers">
-                            </div>
-                            <div class="reviews">
+                            <div id="reviews">
+                                <h2 class="row">Reviews</h2>
                             </div>
                         </div>
                     </div>
@@ -75,9 +70,9 @@
                 </div>
                 <!-- end Box -->
                 <!-- Footer -->
-                <div id="footer">
-                    <p> &copy; Udacity Hackathon</p>
-                </div>
+                <footer row>
+                    <p class="col-md-12 text-center"> &copy; Udacity Hackathon</p>
+                </footer>
                 <!-- end Footer -->
             </div>
             <!-- end Shell -->
